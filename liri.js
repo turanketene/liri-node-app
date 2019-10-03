@@ -37,6 +37,7 @@ switch (action) {
   default:
     break;
 }
+// Functions for each Liri Function
 function findBands(artist) {
   axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(function (response) {
@@ -54,8 +55,7 @@ function findSongs(songName) {
   if (songName === "") {
     songName = "I Saw the Sign";
   }
-
-  spotify.search({ type: 'track', query: songName }, function (err, data) {
+    spotify.search({ type: 'track', query: songName }, function (err, data) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
@@ -71,7 +71,7 @@ function findSongs(songName) {
 }
 
 function findMovies(movieName) {
-  axios.get("http://www.omdbapi.com/?apikey=42518777&t=" + movieName)
+  axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + movieName)
     .then(function (data) {
       var results = `
       Title of the movie: ${data.data.Title}
