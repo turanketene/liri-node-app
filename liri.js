@@ -96,13 +96,13 @@ function doWhatItSays() {
     var value = data[1]
     switch (action) {
       case "concert-this":
-        getBands(value)
+        findBands(value)
         break;
       case "spotify-this-song":
-        getSongs(value)
+        findSongs(value)
         break;
       case "movie-this":
-        getMovies(value)
+        findMovies(value)
         break;
       default:
         break;
